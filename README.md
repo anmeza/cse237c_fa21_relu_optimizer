@@ -104,7 +104,7 @@ deactivate
 ```
 
 ## High Level Steps
-At a very high level, you will need to do the following in order implement this optimization. Note that is not meant to be an exhaustive list of steps but rather a guide on some of the major/critical steps.
+At a very high level, you will need to do the following in order implement this optimization. Note that this is not meant to be an exhaustive list of steps but rather a guide on some of the major/critical steps.
 1. Update the hls4ml templates:
 2. Add a new optimizer pass `relu_fuse.py`: `hls4ml/hls4ml/model/optimizer/passes/`
 3. Update the rest of the config related files for the hls4ml workflow
