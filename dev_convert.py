@@ -238,7 +238,7 @@ def main(args):
         #######################
         
         # Replacing default csim testbench with our testbench
-        shutil.copy2("./myproject_test.cpp", f"{our_config['convert']['OutputDir']}/myproject_test.cpp")
+        shutil.copy2("./updated_c++_hls_files/myproject_test.cpp", f"{our_config['convert']['OutputDir']}/myproject_test.cpp")
         shutil.copy2("./hls_predictions.dat", f"{our_config['convert']['OutputDir']}/tb_data/tb_hls_predictions.dat")
         shutil.copy2("./keras_predictions.dat", f"{our_config['convert']['OutputDir']}/tb_data/tb_keras_predictions.dat")
 
