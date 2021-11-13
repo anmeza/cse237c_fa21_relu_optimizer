@@ -1,0 +1,15 @@
+jupyter
+pydot
+graphviz
+matplotlib
+numpy
+PyYAML
+scikit-learn
+tensorflow
+tqdm
+git+https://github.com/google/qkeras#egg=qkeras
+keras-flops
+git+https://github.com/kentaroy47/keras-Opcounter
+keras-tuner
+setgpu
+mplhep

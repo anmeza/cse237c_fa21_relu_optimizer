@@ -10,5 +10,120 @@ Preliminary work has shown that doing so in HLS results in lowered BRAM and LUT 
 This is possible using hls4ml's Optimizer class. The way hls4ml works is that it first reads in the input Keras model and then deconstructs it into hls4ml's own Internal Representation (IR) called HLSModel, which is another Python class. hls4ml then uses the IR to generate HLS using its templated HLS files. The Optimizer class works on the IR. Once the model is represented in the IR, the user can then turn on an "optimization flag," letting hls4ml know to perform certain optimization passes on the IR. After these optimizations have been applied, then the HLS is generated. Therefore, for this project, you will extend hls4ml and implement a convolutional-relu optimization pass.
 
 ## Repo Structure
+```
+(📂 Directory that will be created)
+(📄 File that will be created)
 
-## Getting Started
+ 📂 Directory that is already included 
+ 📄 File that is already included
+
+📂cse237c_fa21_relu_optimizer
+├── 📂 assets
+|   ├── 📄 hls4ml_overview.jpg
+|   └── 📄 merged_relu_overview.jpg
+|
+├──(📂 my-hls-tiny2-non-merged-relu)  <== Build with your unmodified hls4ml env
+├──(📂 my-hls-tiny2-auto-merged-relu) <== Build with your dev hls4ml env
+├── 📂 my-hls-tiny2-manually-merged-relu
+|
+├── 📂 hls4ml-master
+|   ├── ...
+|   ├── 📂 hls4ml <== Edit this source code
+|   └── ...
+|
+├── 📄 unmodified_tiny2.yml
+├── 📄 dev_tiny2.yml <== Edit this file 
+├── 📂 tiny2-trained-model
+|   ├── 📄 model_best.h5
+|   └── 📄 model_best_nosoftmax.h5
+|
+├── 📄 unmodified_convert.py
+├── 📄 dev_convert.py <== Edit this file
+├── 📂 updated_c++_hls_files
+|   ├── 📄 myproject_test.cpp
+|   └── 📄 nnet_dense_resource.h
+|
+├── 📄 unmodified_requirements.txt
+└── 📄 dev_requirements.txt
+```
+
+## Setting Up Your Environment
+0. (Optional) Set the `$TMPDIR` environment variable to some location with at least 1 GB of storage space (With this variable set, `pip` will temporarily download/build packages in this location instead of the default one which is usually `/tmp`)  
+```
+export TMPDIR=/path/to/location/with/storage/space
+```
+
+1. Use `pip` to install the light-weight environment manager `virtualenv`
+```
+pip install virtualenv
+```
+
+2. Go to this repo, make a directory to store your virtual environments and then go to that new directory
+```
+cd cse237c_fa21_relu_optimizer
+mkdir my-venvs && cd my-venvs
+```
+
+3. Create a new environment called `my-unmodified-hls4ml-env` which will contain an unmodified version of hls4ml (in addition to the other necessary packages) 
+```
+python3 -m venv my-unmodified-hls4ml-env
+```
+
+4. Activate `my-unmodified-hls4ml-env` and use `pip` to install the  python packages listed in `unmodified_requirements.txt`
+```
+source my-unmodified-hls4ml-env/bin/activate
+pip install -r unmodified_requirements.txt
+```
+
+5. Deactivate `my-unmodified-hls4ml-env`
+```
+deactivate
+```
+
+6. Create another new environment called `my-dev-hls4ml-env` which will *initially* contain an unmodified version of hls4ml that you will *eventually* modify as you extend the hls4ml code to support the merged ReLU optimization
+```
+python3 -m venv my-dev-hls4ml-env
+```
+
+7. Activate `my-dev-hls4ml-env` and use `pip` to install the python packages listed in `dev_requirements.txt`
+```
+source my-dev-hls4ml-env/bin/activate
+pip install -r dev_requirements.txt
+```
+
+8. Go to the included `hls4ml-master` code dir and use `pip` to install an *editable* version of `hls4ml` from this local directory (Using the `-e` flag makes it possible for you to update code in this directory and then have those updates be available when you `import hls4ml` without having to reinstall `hls4ml`)
+```
+cd hls4ml-master
+pip install -e .
+```
+
+9. Deactivate `my-dev-hls4ml-env`
+```
+deactivate
+```
+
+
+## Tips on Getting Started
+* Familiarize yourself with with the hls project in `my-hls-tiny2-manually-merged-relu`. In particular, take a look at the following directories/files. The files shown below are the files which were manually edited to implement the convolutional-relu optimization. As mentioned, you will need to edit the source code in `hls_master` so that hls4ml can automatically generate these files when presented with an hls4ml model that calls for the convolutional-relu optimization.
+```
+📂cse237c_fa21_relu_optimizer
+├── 📂 my-hls-tiny2-manually-merged-relu
+|   ├── ...
+|   └── 📂 firmware
+|   |   ├── ...
+|   |   ├── 📄 myproject.cpp
+|   |   ├── 📄 parameters.h
+|   |   └── 📂 nnet_utils
+|   |   |   ├── ...
+|   |   |   ├── 📄 nnet_dense_resource.h
+|   |   |   └── ... 
+|   |   └── ...
+|   └── ...
+``` 
+
+* Activate `my-unmodified-hls4ml-env` and use it to run the following command which will build an hls project for the default/non-merged version of tiny2 (i.e., no convolutional-relu optimization). You should familiarize yourself with the hls project generated in `my-hls-tiny2-non-merged-relu` by looking at the same files mentioned in the previous tip. Take note of what is different the files in the unmodified/non-merged project and the modified/manually-merged project. 
+```
+cd cse237c_fa21_relu_optimizer
+source my-unmodified-hls4ml-env/bin/activate
+python unmodified_convert.py -c unmodified_tiny2.yml
+```

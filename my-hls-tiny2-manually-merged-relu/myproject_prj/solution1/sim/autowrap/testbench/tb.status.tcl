@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /data/armita/Andy/hls4ml_conv2d_investigation/my-hls-test-quantized-tiny2_linebuffer_merged/myproject_prj/solution1/./sim/autowrap/testbench/myproject.cpp_pre.cpp.tb.cpp

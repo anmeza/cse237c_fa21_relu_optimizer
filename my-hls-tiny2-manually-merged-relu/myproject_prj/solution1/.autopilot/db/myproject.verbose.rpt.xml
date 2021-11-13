@@ -1,0 +1,420 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Tue Oct 26 13:24:31 2021
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.518 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">16789618, 16789618, 0.168 sec, 0.168 sec, 41033, 16781313, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="dense_array_array_ap_fixed_8_6_5_3_0_10u_config18_U0">dense_array_array_ap_fixed_8_6_5_3_0_10u_config18_s, 41032, 41032, 0.410 ms, 0.410 ms, 41032, 41032, none</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config11_U0">conv_2d_cl_array_array_ap_fixed_32u_config11_s, 2048, 16781312, 20.480 us, 0.168 sec, 2048, 16781312, none</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config8_U0">conv_2d_cl_array_array_ap_fixed_32u_config8_s, 2450, 2513700, 24.500 us, 25.137 ms, 2450, 2513700, none</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config14_U0">conv_2d_cl_array_array_ap_fixed_32u_config14_s, 242, 1982948, 2.420 us, 19.829 ms, 242, 1982948, none</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config2_U0">conv_2d_cl_array_array_ap_fixed_32u_config2_s, 2048, 102400, 20.480 us, 1.024 ms, 2048, 102400, none</column>
+<column name="conv_2d_cl_array_array_ap_fixed_4u_config5_U0">conv_2d_cl_array_array_ap_fixed_4u_config5_s, 2450, 2513700, 24.500 us, 25.137 ms, 2450, 2513700, none</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_32u_config20_U0">zeropad2d_cl_array_array_ap_fixed_32u_config20_s, 1296, 1296, 12.960 us, 12.960 us, 1296, 1296, none</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_32u_config23_U0">zeropad2d_cl_array_array_ap_fixed_32u_config23_s, 144, 144, 1.440 us, 1.440 us, 144, 144, none</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_4u_config21_U0">zeropad2d_cl_array_array_ap_fixed_4u_config21_s, 1296, 1296, 12.960 us, 12.960 us, 1296, 1296, none</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_32u_config22_U0">zeropad2d_cl_array_array_ap_fixed_32u_config22_s, 1089, 1089, 10.890 us, 10.890 us, 1089, 1089, none</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 34, -</column>
+<column name="FIFO">168, -, 7520, 15452, -</column>
+<column name="Instance">99, 0, 54676, 33373, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 36, -</column>
+<column name="Register">-, -, 6, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">95, 0, 58, 91, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="Block_proc_U0">Block_proc, 0, 0, 2, 11, 0</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config11_U0">conv_2d_cl_array_array_ap_fixed_32u_config11_s, 10, 0, 11537, 6928, 0</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config14_U0">conv_2d_cl_array_array_ap_fixed_32u_config14_s, 9, 0, 11530, 6383, 0</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config2_U0">conv_2d_cl_array_array_ap_fixed_32u_config2_s, 0, 0, 1188, 3373, 0</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config8_U0">conv_2d_cl_array_array_ap_fixed_32u_config8_s, 2, 0, 2583, 4500, 0</column>
+<column name="conv_2d_cl_array_array_ap_fixed_4u_config5_U0">conv_2d_cl_array_array_ap_fixed_4u_config5_s, 2, 0, 10748, 6817, 0</column>
+<column name="dense_array_array_ap_fixed_8_6_5_3_0_10u_config18_U0">dense_array_array_ap_fixed_8_6_5_3_0_10u_config18_s, 76, 0, 16940, 1623, 0</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_32u_config20_U0">zeropad2d_cl_array_array_ap_fixed_32u_config20_s, 0, 0, 45, 1327, 0</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_32u_config22_U0">zeropad2d_cl_array_array_ap_fixed_32u_config22_s, 0, 0, 23, 693, 0</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_32u_config23_U0">zeropad2d_cl_array_array_ap_fixed_32u_config23_s, 0, 0, 35, 1315, 0</column>
+<column name="zeropad2d_cl_array_array_ap_fixed_4u_config21_U0">zeropad2d_cl_array_array_ap_fixed_4u_config21_s, 0, 0, 45, 403, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="layer10_out_V_data_0_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_10_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_11_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_12_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_13_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_14_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_15_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_16_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_17_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_18_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_19_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_1_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_20_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_21_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_22_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_23_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_24_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_25_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_26_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_27_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_28_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_29_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_2_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_30_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_31_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_3_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_4_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_5_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_6_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_7_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_8_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer10_out_V_data_9_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer13_out_V_data_0_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_10_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_11_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_12_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_13_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_14_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_15_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_16_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_17_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_18_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_19_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_1_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_20_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_21_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_22_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_23_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_24_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_25_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_26_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_27_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_28_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_29_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_2_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_30_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_31_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_3_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_4_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_5_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_6_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_7_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_8_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer13_out_V_data_9_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_0_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_10_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_11_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_12_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_13_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_14_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_15_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_16_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_17_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_18_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_19_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_1_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_20_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_21_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_22_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_23_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_24_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_25_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_26_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_27_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_28_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_29_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_2_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_30_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_31_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_3_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_4_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_5_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_6_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_7_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_8_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer16_out_V_data_9_V_U">0, 9, 0, -, 64, 8, 512</column>
+<column name="layer20_out_V_data_0_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_10_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_11_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_12_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_13_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_14_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_15_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_16_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_17_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_18_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_19_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_1_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_20_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_21_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_22_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_23_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_24_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_25_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_26_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_27_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_28_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_29_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_2_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_30_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_31_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_3_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_4_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_5_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_6_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_7_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_8_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer20_out_V_data_9_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer21_out_V_data_0_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer21_out_V_data_1_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer21_out_V_data_2_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer21_out_V_data_3_V_U">1, 45, 0, -, 1225, 8, 9800</column>
+<column name="layer22_out_V_data_0_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_10_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_11_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_12_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_13_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_14_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_15_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_16_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_17_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_18_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_19_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_1_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_20_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_21_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_22_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_23_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_24_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_25_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_26_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_27_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_28_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_29_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_2_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_30_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_31_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_3_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_4_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_5_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_6_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_7_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_8_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer22_out_V_data_9_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer23_out_V_data_0_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_10_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_11_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_12_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_13_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_14_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_15_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_16_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_17_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_18_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_19_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_1_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_20_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_21_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_22_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_23_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_24_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_25_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_26_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_27_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_28_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_29_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_2_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_30_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_31_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_3_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_4_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_5_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_6_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_7_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_8_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer23_out_V_data_9_V_U">1, 32, 0, -, 121, 8, 968</column>
+<column name="layer4_out_V_data_0_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_10_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_11_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_12_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_13_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_14_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_15_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_16_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_17_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_18_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_19_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_1_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_20_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_21_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_22_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_23_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_24_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_25_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_26_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_27_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_28_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_29_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_2_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_30_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_31_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_3_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_4_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_5_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_6_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_7_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_8_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer4_out_V_data_9_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer7_out_V_data_0_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer7_out_V_data_1_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer7_out_V_data_2_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+<column name="layer7_out_V_data_3_V_U">1, 43, 0, -, 1024, 8, 8192</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Block_proc_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="Block_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_done">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_Block_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Block_proc_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="ap_sync_reg_Block_proc_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_ready">9, 2, 1, 2</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_ready_count">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="Block_proc_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="ap_sync_reg_Block_proc_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_ready">1, 0, 1, 0</column>
+<column name="conv_2d_cl_array_array_ap_fixed_32u_config2_U0_ap_ready_count">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="input_1_V_data_0_V_TDATA">in, 8, axis, input_1_V_data_0_V, pointer</column>
+<column name="input_1_V_data_0_V_TVALID">in, 1, axis, input_1_V_data_0_V, pointer</column>
+<column name="input_1_V_data_0_V_TREADY">out, 1, axis, input_1_V_data_0_V, pointer</column>
+<column name="input_1_V_data_1_V_TDATA">in, 8, axis, input_1_V_data_1_V, pointer</column>
+<column name="input_1_V_data_1_V_TVALID">in, 1, axis, input_1_V_data_1_V, pointer</column>
+<column name="input_1_V_data_1_V_TREADY">out, 1, axis, input_1_V_data_1_V, pointer</column>
+<column name="input_1_V_data_2_V_TDATA">in, 8, axis, input_1_V_data_2_V, pointer</column>
+<column name="input_1_V_data_2_V_TVALID">in, 1, axis, input_1_V_data_2_V, pointer</column>
+<column name="input_1_V_data_2_V_TREADY">out, 1, axis, input_1_V_data_2_V, pointer</column>
+<column name="layer18_out_V_data_0_V_TDATA">out, 8, axis, layer18_out_V_data_0_V, pointer</column>
+<column name="layer18_out_V_data_0_V_TVALID">out, 1, axis, layer18_out_V_data_0_V, pointer</column>
+<column name="layer18_out_V_data_0_V_TREADY">in, 1, axis, layer18_out_V_data_0_V, pointer</column>
+<column name="layer18_out_V_data_1_V_TDATA">out, 8, axis, layer18_out_V_data_1_V, pointer</column>
+<column name="layer18_out_V_data_1_V_TVALID">out, 1, axis, layer18_out_V_data_1_V, pointer</column>
+<column name="layer18_out_V_data_1_V_TREADY">in, 1, axis, layer18_out_V_data_1_V, pointer</column>
+<column name="layer18_out_V_data_2_V_TDATA">out, 8, axis, layer18_out_V_data_2_V, pointer</column>
+<column name="layer18_out_V_data_2_V_TVALID">out, 1, axis, layer18_out_V_data_2_V, pointer</column>
+<column name="layer18_out_V_data_2_V_TREADY">in, 1, axis, layer18_out_V_data_2_V, pointer</column>
+<column name="layer18_out_V_data_3_V_TDATA">out, 8, axis, layer18_out_V_data_3_V, pointer</column>
+<column name="layer18_out_V_data_3_V_TVALID">out, 1, axis, layer18_out_V_data_3_V, pointer</column>
+<column name="layer18_out_V_data_3_V_TREADY">in, 1, axis, layer18_out_V_data_3_V, pointer</column>
+<column name="layer18_out_V_data_4_V_TDATA">out, 8, axis, layer18_out_V_data_4_V, pointer</column>
+<column name="layer18_out_V_data_4_V_TVALID">out, 1, axis, layer18_out_V_data_4_V, pointer</column>
+<column name="layer18_out_V_data_4_V_TREADY">in, 1, axis, layer18_out_V_data_4_V, pointer</column>
+<column name="layer18_out_V_data_5_V_TDATA">out, 8, axis, layer18_out_V_data_5_V, pointer</column>
+<column name="layer18_out_V_data_5_V_TVALID">out, 1, axis, layer18_out_V_data_5_V, pointer</column>
+<column name="layer18_out_V_data_5_V_TREADY">in, 1, axis, layer18_out_V_data_5_V, pointer</column>
+<column name="layer18_out_V_data_6_V_TDATA">out, 8, axis, layer18_out_V_data_6_V, pointer</column>
+<column name="layer18_out_V_data_6_V_TVALID">out, 1, axis, layer18_out_V_data_6_V, pointer</column>
+<column name="layer18_out_V_data_6_V_TREADY">in, 1, axis, layer18_out_V_data_6_V, pointer</column>
+<column name="layer18_out_V_data_7_V_TDATA">out, 8, axis, layer18_out_V_data_7_V, pointer</column>
+<column name="layer18_out_V_data_7_V_TVALID">out, 1, axis, layer18_out_V_data_7_V, pointer</column>
+<column name="layer18_out_V_data_7_V_TREADY">in, 1, axis, layer18_out_V_data_7_V, pointer</column>
+<column name="layer18_out_V_data_8_V_TDATA">out, 8, axis, layer18_out_V_data_8_V, pointer</column>
+<column name="layer18_out_V_data_8_V_TVALID">out, 1, axis, layer18_out_V_data_8_V, pointer</column>
+<column name="layer18_out_V_data_8_V_TREADY">in, 1, axis, layer18_out_V_data_8_V, pointer</column>
+<column name="layer18_out_V_data_9_V_TDATA">out, 8, axis, layer18_out_V_data_9_V, pointer</column>
+<column name="layer18_out_V_data_9_V_TVALID">out, 1, axis, layer18_out_V_data_9_V, pointer</column>
+<column name="layer18_out_V_data_9_V_TREADY">in, 1, axis, layer18_out_V_data_9_V, pointer</column>
+<column name="const_size_in_1">out, 16, ap_vld, const_size_in_1, pointer</column>
+<column name="const_size_in_1_ap_vld">out, 1, ap_vld, const_size_in_1, pointer</column>
+<column name="const_size_out_1">out, 16, ap_vld, const_size_out_1, pointer</column>
+<column name="const_size_out_1_ap_vld">out, 1, ap_vld, const_size_out_1, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, myproject, return value</column>
+</table>
+</item>
+</section>
+</profile>
