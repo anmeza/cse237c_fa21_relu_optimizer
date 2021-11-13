@@ -22,23 +22,23 @@ This is possible using hls4ml's Optimizer class. The way hls4ml works is that it
 |   ├── 📄 hls4ml_overview.jpg
 |   └── 📄 merged_relu_overview.jpg
 |
-├──(📂 my-hls-tiny2-non-merged-relu)  <== Build with your unmodified hls4ml env
-├──(📂 my-hls-tiny2-auto-merged-relu) <== Build with your dev hls4ml env
+├──(📂 my-hls-tiny2-non-merged-relu)  <===== Build with your unmodified hls4ml env
+├──(📂 my-hls-tiny2-auto-merged-relu) <===== Build with your dev hls4ml env
 ├── 📂 my-hls-tiny2-manually-merged-relu
 |
 ├── 📂 hls4ml-master
 |   ├── ...
-|   ├── 📂 hls4ml <== Edit this source code
+|   ├── 📂 hls4ml <===== Edit this source code
 |   └── ...
 |
 ├── 📄 unmodified_tiny2.yml
-├── 📄 dev_tiny2.yml <== Edit this file 
+├── 📄 dev_tiny2.yml <===== Edit this file
 ├── 📂 tiny2-trained-model
 |   ├── 📄 model_best.h5
 |   └── 📄 model_best_nosoftmax.h5
 |
 ├── 📄 unmodified_convert.py
-├── 📄 dev_convert.py <== Edit this file
+├── 📄 dev_convert.py <===== Edit this file
 ├── 📂 updated_c++_hls_files
 |   ├── 📄 myproject_test.cpp
 |   └── 📄 nnet_dense_resource.h
