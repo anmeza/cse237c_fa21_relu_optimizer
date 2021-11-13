@@ -12,7 +12,7 @@ This is possible using hls4ml's Optimizer class. The way hls4ml works is that it
 
 ## Repo Structure
 ```
-(📂 Directory that will be created)
+(📂 Directory that will be created)    
 (📄 File that will be created)
 
  📂 Directory that is already included 
@@ -103,23 +103,40 @@ pip install -e .
 deactivate
 ```
 
+## High Level Steps
+At a very high level, you will need to do the following in order implement this optimization. Note that is not meant to be an exhaustive list of steps but rather a guide on some of the major/critical steps.
+1. Update the hls4ml templates:
+2. Add a new optimizer pass `relu_fuse.py`: `hls4ml/hls4ml/model/optimizer/passes/`
+3. Update the rest of the config related files for the hls4ml workflow
+```
+⚠️ Some directories/files have neen hidden for readibility⚠️
+
+📂cse237c_fa21_relu_optimizer
+├── 📂 hls4ml-master
+|   ├── 📂 hls4ml 3️⃣
+|   |   ├── 📂 model
+|   |   |   ├── 📂 optimizer
+|   |   |   |   ├── 📂 passes
+|   |   |   |   |   └── (📄 relu_fuse.py) 2️⃣
+|   |   ├── 📂 templates
+|   |   |   ├── 📂 vivado
+|   |   |   |   ├── 📂 nnet_utils
+|   |   |   |   |   └── 📄 nnet_dense_resource.h 1️⃣
+```
 
 ## Tips on Getting Started
+
 * Familiarize yourself with with the hls project in `my-hls-tiny2-manually-merged-relu`. In particular, take a look at the following directories/files. The files shown below are the files which were manually edited to implement the convolutional-relu optimization. As mentioned, you will need to edit the source code in `hls_master` so that hls4ml can automatically generate these files when presented with an hls4ml model that calls for the convolutional-relu optimization.
 ```
+⚠️ Some directories/files have neen hidden for readibility⚠️
+
 📂cse237c_fa21_relu_optimizer
 ├── 📂 my-hls-tiny2-manually-merged-relu
-|   ├── ...
-|   └── 📂 firmware
-|   |   ├── ...
+|   ├── 📂 firmware
 |   |   ├── 📄 myproject.cpp
 |   |   ├── 📄 parameters.h
-|   |   └── 📂 nnet_utils
-|   |   |   ├── ...
-|   |   |   ├── 📄 nnet_dense_resource.h
-|   |   |   └── ... 
-|   |   └── ...
-|   └── ...
+|   |   ├── 📂 nnet_utils
+|   |   |   └── 📄 nnet_dense_resource.h
 ``` 
 
 * Activate `my-unmodified-hls4ml-env` and use it to run the following command which will build an hls project for the default/non-merged version of tiny2 (i.e., no convolutional-relu optimization). You should familiarize yourself with the hls project generated in `my-hls-tiny2-non-merged-relu` by looking at the same files mentioned in the previous tip. Take note of what is different between the files in the unmodified/non-merged project and the modified/manually-merged project. 
