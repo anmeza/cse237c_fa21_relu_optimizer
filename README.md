@@ -121,7 +121,7 @@ deactivate
 |   └── ...
 ``` 
 
-* Activate `my-unmodified-hls4ml-env` and use it to run the following command which will build an hls project for the default/non-merged version of tiny2 (i.e., no convolutional-relu optimization). You should familiarize yourself with the hls project generated in `my-hls-tiny2-non-merged-relu` by looking at the same files mentioned in the previous tip. Take note of what is different the files in the unmodified/non-merged project and the modified/manually-merged project. 
+* Activate `my-unmodified-hls4ml-env` and use it to run the following command which will build an hls project for the default/non-merged version of tiny2 (i.e., no convolutional-relu optimization). You should familiarize yourself with the hls project generated in `my-hls-tiny2-non-merged-relu` by looking at the same files mentioned in the previous tip. Take note of what is different between the files in the unmodified/non-merged project and the modified/manually-merged project. 
 ```
 cd cse237c_fa21_relu_optimizer
 source my-unmodified-hls4ml-env/bin/activate
