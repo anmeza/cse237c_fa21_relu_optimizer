@@ -1,5 +1,6 @@
 # CSE237C Fall 2021 ReLU Optimizer Final Project
 ![convolutional-relu_optimization](/assets/merged_relu_overview.png)
+
 ## Project Overview
 ![hls4ml_workflow](/assets/hls4ml_overview.jpg)
 hls4ml is a Python library used to generate HLS for machine learning models defined using the most popular Python ML libraries, e.g., Tensorflow, Keras. Right now, hls4ml best supports converting Keras models into HLS, so that's what we'll be focusing on in this project. The goal of hls4ml is to generate HLS that is low-latency and resource-efficient. To achieve this, they execute the entire ML model on-chip, using a dataflow model of computation, where each dataflow stage consists of a single neural network layer. In between each dataflow stage, data is streamed using FIFOs that are implemented using BRAMs. This implies that the more layers you have, the more FIFOs you need, which costs more BRAMs, making it costly to implement deeper networks. This project aims to cut down on BRAM utilization by merging two neural network layers that commonly appear next to each other in Convolutional Neural Networks (CNNs).
@@ -145,3 +146,6 @@ cd cse237c_fa21_relu_optimizer
 source my-unmodified-hls4ml-env/bin/activate
 python unmodified_convert.py -c unmodified_tiny2.yml
 ```
+
+---------------------------------------------------------------------------
+*For clarification on the information presented in this README, please send an email to Andy (anmeza@ucsd.edu) & Olivia (oweng@ucsd.edu)*
