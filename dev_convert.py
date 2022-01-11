@@ -2,7 +2,7 @@ from tensorflow.keras.models import Model
 from sklearn.metrics import accuracy_score
 import argparse
 from tensorflow.keras.datasets import cifar10
-from train import yaml_load
+#from train import yaml_load
 from qkeras.quantizers import quantized_bits, quantized_relu
 from qkeras.qlayers import QDense, QActivation
 from tensorflow.keras.regularizers import l1
@@ -15,10 +15,12 @@ from sklearn.datasets import fetch_openml
 from tensorflow.keras.utils import to_categorical
 import numpy as np
 import hls4ml
+import yaml
 from qkeras.utils import _add_supported_quantized_objects
 import tensorflow as tf
 import os
 import shutil
+import ssl
 
 #Check hls4ml version
 #print(hls4ml.__version__)
@@ -31,7 +33,7 @@ os.environ['PATH'] = '/data/opt/Xilinx/Vivado/2020.1/bin:' + os.environ['PATH']
 
 # Set the number of test images included
 # in the input_data/output_preds .dat files
-num_test_imgs = 10 #10000
+num_test_imgs = 100 #10000
 
 
 def print_dict(d, indent=0):
@@ -47,7 +49,8 @@ def print_dict(d, indent=0):
 
 def main(args):
     # parameters
-    our_config = yaml_load(args.config)
+    with open(args.config) as file:
+    	our_config = yaml.safe_load(file)
     save_dir = our_config['save_dir']
     model_name = our_config['model']['name']
     model_file_path = os.path.join(save_dir, 'model_best.h5')
@@ -69,13 +72,13 @@ def main(args):
 
     model.summary()
     tf.keras.utils.plot_model(model,
-                              to_file="model.png",
+                             to_file="model.png",
                               show_shapes=True,
                               show_dtype=False,
                               show_layer_names=False,
                               rankdir="TB",
                               expand_nested=False)
-
+    ssl._create_default_https_context = ssl._create_unverified_context
     _, (X_test, y_test) = cifar10.load_data()
     X_test = np.ascontiguousarray(X_test/256.)
     num_classes = 10
@@ -105,6 +108,11 @@ def main(args):
     config['Model']['ReuseFactor'] = our_config['convert']['ReuseFactor']
     config['Model']['Strategy'] = our_config['convert']['Strategy']
     config['Model']['Precision'] = our_config['convert']['Precision']
+    config['Model']['MergedRelu'] = our_config['convert']['MergedRelu']
+    if bool(config['Model']['MergedRelu']):
+        config['SkipOptimizers'] = ['reshape_stream']
+    else:
+        config['SkipOptimizers'] = ['reshape_stream', 'relu_merge']
     config['SkipOptimizers'] = ['reshape_stream']
     print(config['LayerName'].keys())
     for name in config['LayerName'].keys():
