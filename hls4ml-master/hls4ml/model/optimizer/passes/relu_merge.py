@@ -17,7 +17,8 @@ class MergeRelu(OptimizerPass):
         else:
             shape = [previous_node.attributes['n_filt'], previous_node.attributes['out_height'], previous_node.attributes['out_width']]
             dims = ['N_FILT_{}'.format(previous_node.index), 'OUT_HEIGHT_{}'.format(previous_node.index), 'OUT_WIDTH_{}'.format(previous_node.index)]
-        previous_node.add_output_variable(shape, dims)
+        activation_precision, _ = model.config.get_precision(node, var='result')
+        previous_node.add_output_variable(shape, dims, precision=activation_precision)
         if not node.get_output_nodes():
             print("WARNING: {} is the output layer! No rewiring performed.".format(node.name))
             model.remove_node(node, rewire=False)
