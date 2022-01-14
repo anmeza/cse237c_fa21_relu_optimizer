@@ -2,9 +2,11 @@ from hls4ml.model.optimizer import OptimizerPass
 
 class MergeRelu(OptimizerPass):
     def match(self, node):
-        is_match = node.__class__.__name__ == 'Activation' and \
-            (node.get_input_node().__class__.__name__ == 'Conv2D' or 
-            node.get_input_node().__class__.__name__ == 'Conv2DBatchnorm')
+        supported_layers = ['Conv2D', 'Conv2DBatchnorm', 'Dense']
+        is_match = node.get_input_node().__class__.__name__ in supported_layers
+
+        #hls4ml names ReLU activations 'Activation'
+        is_match = is_match and (node.__class__.__name__ == 'Activation') 
         return is_match
 
     def transform(self, model, node):
